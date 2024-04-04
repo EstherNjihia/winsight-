@@ -37,17 +37,27 @@ class _FirstPageState extends State<FirstPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromARGB(255, 59, 27, 127),
       appBar: AppBar(
-        backgroundColor: Colors.blue,
-        title: Center(
-          child: Text(
-            "W I N S I G H T",
-            style: TextStyle(
-              color: Colors.white,
-              fontWeight: FontWeight.bold,
-              fontSize: 28,
+        backgroundColor: Color.fromRGBO(2, 0, 108, 1),
+        title: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              "Predictions",
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 18,
+              ),
             ),
-          ),
+            Text(
+              "All Games",
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 16,
+              ),
+            ),
+          ],
         ),
         elevation: 0,
       ),
@@ -64,14 +74,14 @@ class _FirstPageState extends State<FirstPage> {
 
           //profile
           BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: "Profile",
+            icon: Icon(Icons.star_border_purple500),
+            label: "VIP",
           ),
 
           //settings
           BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
-            label: "Settings",
+            icon: Icon(Icons.diamond),
+            label: "VVIP",
           ),
         ],
       ),
