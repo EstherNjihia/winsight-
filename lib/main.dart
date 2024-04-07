@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:winsight/pages/first_page.dart';
 import 'package:winsight/pages/home_page.dart';
+import 'package:winsight/pages/intro_page.dart';
 import 'package:winsight/pages/vip_page.dart';
 import 'package:winsight/pages/vvip_page.dart';
 
@@ -17,8 +18,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: FirstPage(),
+      home: IntroPage(),
       routes: {
+        '/first_page': (context) => FirstPage(),
         '/home_page': (context) => HomePage(),
         '/vip_page': (context) => vipPage(),
         '/vvip_page': (context) => vvipPage(),

@@ -9,6 +9,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color.fromARGB(255, 59, 27, 127), body: GameCard());
+        backgroundColor: Color.fromARGB(255, 59, 27, 127),
+         body: GameCard());
   }
 }

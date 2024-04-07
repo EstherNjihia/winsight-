@@ -62,29 +62,6 @@ class _FirstPageState extends State<FirstPage> {
         elevation: 0,
       ),
       body: _pages[_selectedIndex],
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: _selectedIndex,
-        onTap: _navigateBottomBar,
-        items: [
-          //home
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: "Home",
-          ),
-
-          //profile
-          BottomNavigationBarItem(
-            icon: Icon(Icons.star_border_purple500),
-            label: "VIP",
-          ),
-
-          //settings
-          BottomNavigationBarItem(
-            icon: Icon(Icons.diamond),
-            label: "VVIP",
-          ),
-        ],
-      ),
     );
   }
 }
