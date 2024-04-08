@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:winsight/pages/first_page.dart';
+import 'package:winsight/pages/home_page.dart';
 
 class IntroPage extends StatelessWidget {
   const IntroPage({super.key});
@@ -32,7 +32,7 @@ class IntroPage extends StatelessWidget {
                 "W I N S I G H T",
                 style: TextStyle(
                   color: Colors.white,
-                  fontSize: 32,
+                  fontSize: 30,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -77,7 +77,7 @@ class IntroPage extends StatelessWidget {
                 onTap: () => Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => FirstPage(),
+                    builder: (context) => HomePage(),
                   ),
                 ),
                 child: Container(
