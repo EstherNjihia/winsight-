@@ -2,8 +2,8 @@
 
 import 'package:flutter/material.dart';
 
-class vvipPage extends StatelessWidget {
-  const vvipPage({super.key});
+class VvipPage extends StatelessWidget {
+  const VvipPage({super.key});
 
   @override
   Widget build(BuildContext context) {

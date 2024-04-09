@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/home_page': (context) => HomePage(),
         '/vip_page': (context) => vipPage(),
-        '/vvip_page': (context) => vvipPage(),
+        '/vvip_page': (context) => VvipPage(),
       },
     );
   }
