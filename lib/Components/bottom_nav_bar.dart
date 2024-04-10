@@ -1,12 +1,55 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, must_be_immutable
 
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
-import 'package:winsight/pages/home_page.dart';
-import 'package:winsight/pages/vip_page.dart';
-import 'package:winsight/pages/vvip_page.dart';
+//import 'package:winsight/pages/home_page.dart';
+//import 'package:winsight/pages/vip_page.dart';
+//import 'package:winsight/pages/vvip_page.dart';
 
-class MyBottomNavBar extends StatefulWidget {
+class MyBottomNavBar extends StatelessWidget {
+  void Function(int)? onTabChange;
+
+  MyBottomNavBar({
+    super.key,
+    required this.onTabChange,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: Color.fromARGB(255, 59, 27, 127),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 20),
+        child: GNav(
+          // selectedIndex: _currentIndex,
+          // onTabChange: (index) => setState(() => _currentIndex = index),
+          backgroundColor: Color.fromARGB(255, 59, 27, 127),
+          color: Colors.white,
+          activeColor: Colors.white,
+          tabBackgroundColor: const Color.fromARGB(255, 20, 61, 172),
+          padding: EdgeInsets.all(18),
+          gap: 8,
+          tabs: const [
+            GButton(
+              icon: Icons.home,
+              text: "Home",
+            ),
+            GButton(
+              icon: Icons.star,
+              text: "VIP",
+            ),
+            GButton(
+              icon: Icons.diamond,
+              text: "VVIP",
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+/*class MyBottomNavBar extends StatefulWidget {
   const MyBottomNavBar({super.key});
 
   @override
@@ -105,4 +148,4 @@ class _MyBottomNavBarState extends State<MyBottomNavBar> {
       ),*/
     );
   }
-}
+}*/
