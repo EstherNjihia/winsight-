@@ -7,16 +7,13 @@ class VvipPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Color.fromARGB(255, 59, 27, 127),
-      body: Center(
-        child: Text(
-          "The VVIP PAGE",
-          style: TextStyle(
-            color: Colors.white,
-            fontWeight: FontWeight.bold,
-            fontSize: 64,
-          ),
+    return Center(
+      child: Text(
+        "The VVIP PAGE",
+        style: TextStyle(
+          color: Colors.white,
+          fontWeight: FontWeight.bold,
+          fontSize: 64,
         ),
       ),
     );

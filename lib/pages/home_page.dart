@@ -2,7 +2,10 @@
 import 'package:flutter/material.dart';
 //import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:winsight/Components/bottom_nav_bar.dart';
-import 'package:winsight/Components/tip_card.dart';
+//import 'package:winsight/Components/tip_card.dart';
+import 'package:winsight/pages/free_page.dart';
+import 'package:winsight/pages/vip_page.dart';
+import 'package:winsight/pages/vvip_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -12,40 +15,32 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  //this selected index is to control  the bottom nav bar
+  int _selectedIndex = 0;
+
+  //method to update the selected index
+  //wehn the user taps on the bottom bar
+  void navigateBottomBar(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
+  //pages to display
+
+  final List<Widget> _pages = [
+    const FreePage(),
+    const vipPage(),
+    const VvipPage(),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 59, 27, 127),
-      bottomNavigationBar: MyBottomNavBar(),
-      /*bottomNavigationBar: Container(
-        color: Color.fromARGB(255, 59, 27, 127),
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 20),
-          child: GNav(
-            backgroundColor: Color.fromARGB(255, 59, 27, 127),
-            color: Colors.white,
-            activeColor: Colors.white,
-            tabBackgroundColor: const Color.fromARGB(255, 20, 61, 172),
-            padding: EdgeInsets.all(18),
-            gap: 8,
-            tabs: const [
-              GButton(
-                icon: Icons.home,
-                text: "Home",
-              ),
-              GButton(
-                icon: Icons.star,
-                text: "VIP",
-              ),
-              GButton(
-                icon: Icons.diamond,
-                text: "VVIP",
-              ),
-            ],
-          ),
-        ),
-      ),*/
-     // body:
+      bottomNavigationBar:
+          MyBottomNavBar(onTabChange: (index) => navigateBottomBar(index)),
+      body: _pages[_selectedIndex],
     );
   }
 }
