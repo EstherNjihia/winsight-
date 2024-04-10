@@ -7,10 +7,12 @@ import 'package:google_nav_bar/google_nav_bar.dart';
 //import 'package:winsight/pages/vvip_page.dart';
 
 class MyBottomNavBar extends StatelessWidget {
+  final int selectedIndex;
   void Function(int)? onTabChange;
 
   MyBottomNavBar({
     super.key,
+    required this.selectedIndex,
     required this.onTabChange,
   });
 

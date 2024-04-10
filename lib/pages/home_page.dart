@@ -1,8 +1,8 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 import 'package:flutter/material.dart';
-//import 'package:google_nav_bar/google_nav_bar.dart';
+
 import 'package:winsight/Components/bottom_nav_bar.dart';
-//import 'package:winsight/Components/tip_card.dart';
+
 import 'package:winsight/pages/free_page.dart';
 import 'package:winsight/pages/vip_page.dart';
 import 'package:winsight/pages/vvip_page.dart';
@@ -38,8 +38,11 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 59, 27, 127),
-      bottomNavigationBar:
-          MyBottomNavBar(onTabChange: (index) => navigateBottomBar(index)),
+      bottomNavigationBar: MyBottomNavBar(
+        selectedIndex: _selectedIndex,
+        onTabChange: (index) => navigateBottomBar(index),
+        //onTabChange: (index) => navigateBottomBar(index)
+      ),
       appBar: AppBar(
         backgroundColor: const Color.fromARGB(255, 20, 61, 172),
         title: Row(

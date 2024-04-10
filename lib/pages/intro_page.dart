@@ -13,7 +13,6 @@ class IntroPage extends StatelessWidget {
       body: Center(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 25),
-          
           child: Column(
             children: [
               const SizedBox(
@@ -48,7 +47,7 @@ class IntroPage extends StatelessWidget {
 
               //text
               Text(
-                "Get tips and win money🤑!",
+                "Win the game. Win your bets🤑!",
                 style: TextStyle(
                   color: Colors.grey[200],
                   fontSize: 15,
@@ -61,14 +60,12 @@ class IntroPage extends StatelessWidget {
 
               //paragraph
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                child: Center(
-                  child: Text(
-                    "View the latest odds and place bets online. Its Legal, safe to work with us!",
-                    style: TextStyle(
-                      color: Colors.grey[200],
-                      fontSize: 17,
-                    ),
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                  "Level up your football betting with winning insights",
+                  style: TextStyle(
+                    color: Colors.grey[200],
+                    fontSize: 20,
                   ),
                 ),
               ),
