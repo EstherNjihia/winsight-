@@ -13,8 +13,12 @@ class IntroPage extends StatelessWidget {
       body: Center(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 25),
+          
           child: Column(
             children: [
+              const SizedBox(
+                height: 32,
+              ),
               //logo
               Padding(
                 padding: const EdgeInsets.all(25.0),

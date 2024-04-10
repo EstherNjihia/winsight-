@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:winsight/pages/home_page.dart';
 import 'package:winsight/pages/vip_page.dart';
 import 'package:winsight/pages/vvip_page.dart';
@@ -13,18 +14,12 @@ class MyBottomNavBar extends StatefulWidget {
 }
 
 class _MyBottomNavBarState extends State<MyBottomNavBar> {
-  int _currentIndex = 2; // ! Chnage this before production => 0
+  int _currentIndex = 1; // ! Chnage this before production => 0
 
-  final screens = [
-    // Home page
+  final List<Widget> _screens = [
     HomePage(),
-
-    //vip page
     vipPage(),
-
-    //vvip_page
-    VvipPage()
-
+    VvipPage(),
   ];
 
   @override
@@ -34,17 +29,47 @@ class _MyBottomNavBarState extends State<MyBottomNavBar> {
     // Updates
     return Scaffold(
       // Body
-      body: screens[_currentIndex],
+      body: _screens[_currentIndex],
 
       // BG Color
       // backgroundColor: Colors.red,
 
-      // BottomNavigationBar
-      bottomNavigationBar: BottomNavigationBar(
+      //Esther's gnav
+      bottomNavigationBar: Container(
+        color: Color.fromARGB(255, 59, 27, 127),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 20),
+          child: GNav(
+            selectedIndex: _currentIndex,
+            onTabChange: (index) => setState(() => _currentIndex = index),
+            backgroundColor: Color.fromARGB(255, 59, 27, 127),
+            color: Colors.white,
+            activeColor: Colors.white,
+            tabBackgroundColor: const Color.fromARGB(255, 20, 61, 172),
+            padding: EdgeInsets.all(18),
+            gap: 8,
+            tabs: const [
+              GButton(
+                icon: Icons.home,
+                text: "Home",
+              ),
+              GButton(
+                icon: Icons.star,
+                text: "VIP",
+              ),
+              GButton(
+                icon: Icons.diamond,
+                text: "VVIP",
+              ),
+            ],
+          ),
+        ),
+      ),
+
+      // Kevo's BottomNavigationBar
+      /*bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
-        // backgroundColor: Colors.grey,
-        // backgroundColor: Colors.black,
-        // fixedColor: Colors.white,
+        backgroundColor: Color.fromARGB(255, 59, 27, 127),
         selectedItemColor: Colors.blue,
         currentIndex: _currentIndex,
         onTap: (index) => setState(() => _currentIndex = index),
@@ -77,86 +102,7 @@ class _MyBottomNavBarState extends State<MyBottomNavBar> {
           ),
           //
         ],
-      ),
+      ),*/
     );
   }
 }
-
-
-// class MyBottomNavBar extends StatefulWidget {
-//   const MyBottomNavBar({Key? key});
-
-//   @override
-//   State<MyBottomNavBar> createState() => _MyBottomNavBarState();
-// }
-
-// class _MyBottomNavBarState extends State<MyBottomNavBar> {
-//   // Keeps track of the selected index
-//   int _selectedIndex = 0;
-
-//   // Method to update to the new page
-//   void _navigateBottomBar(int index) {
-//     setState(() {
-//       _selectedIndex = index;
-//     });
-//   }
-
-//   // List of pages
-//   final List<Widget> _pages = [
-//     // Home page
-//     HomePage(),
-
-//     //vip page
-//     vipPage(),
-
-//     //vvip_page
-//     vvipPage()
-//   ];
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       body: _pages[_selectedIndex],
-//       bottomNavigationBar: BottomNavigationBar(
-//         backgroundColor: Color.fromARGB(255, 59, 27, 127),
-//         elevation: 0,
-//         currentIndex: _selectedIndex,
-//         onTap: _navigateBottomBar,
-//         items: const [
-//           // Home
-//           BottomNavigationBarItem(
-//             icon: Icon(
-//               Icons.home,
-//               color: Colors.white,
-//               size: 32,
-//             ),
-//             label: "Home",
-//           ),
-//           // VIP
-//           BottomNavigationBarItem(
-//             icon: Icon(
-//               Icons.star,
-//               color: Colors.white,
-//               size: 32,
-//             ),
-//             label: "VIP",
-//           ),
-//           // VVIP
-//           BottomNavigationBarItem(
-//             icon: Icon(
-//               Icons.diamond,
-//               color: Colors.white,
-//               size: 32,
-//             ),
-//             label: "VVIP",
-//           ),
-//         ],
-//         selectedItemColor: Colors.white,
-//         selectedFontSize: 16,
-//         unselectedItemColor: Colors.white.withOpacity(0.6),
-//         selectedLabelStyle: TextStyle(color: Colors.white),
-//         unselectedLabelStyle: TextStyle(color: Colors.white.withOpacity(0.6)),
-//       ),
-//     );
-//   }
-// }

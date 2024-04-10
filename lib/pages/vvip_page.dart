@@ -9,6 +9,16 @@ class VvipPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 59, 27, 127),
+      body: Center(
+        child: Text(
+          "The VVIP PAGE",
+          style: TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+            fontSize: 64,
+          ),
+        ),
+      ),
     );
   }
 }

@@ -7,9 +7,15 @@ class TipCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      elevation: 4,
-      
-    );
+    return const Placeholder();
+    /*Container(
+      margin: EdgeInsets.all(20),
+      height: 200,
+      width: MediaQuery.of(context).size.width,
+      decoration: BoxDecoration(
+        gradient: LinearGradient(colors: const [Colors.blue, Colors.purple]),
+        borderRadius: BorderRadius.circular(10),
+      ),
+    );*/
   }
 }
