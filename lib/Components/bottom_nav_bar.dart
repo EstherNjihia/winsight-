@@ -1,57 +1,12 @@
 // ignore_for_file: prefer_const_constructors, must_be_immutable
 
 import 'package:flutter/material.dart';
-import 'package:google_nav_bar/google_nav_bar.dart';
-//import 'package:winsight/pages/home_page.dart';
-//import 'package:winsight/pages/vip_page.dart';
-//import 'package:winsight/pages/vvip_page.dart';
+import 'package:winsight/pages/contact.dart';
+import 'package:winsight/pages/free_page.dart';
+import 'package:winsight/pages/premium.dart';
 
-class MyBottomNavBar extends StatelessWidget {
-  final int selectedIndex;
-  void Function(int)? onTabChange;
 
-  MyBottomNavBar({
-    super.key,
-    required this.selectedIndex,
-    required this.onTabChange,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      color: Color.fromARGB(255, 59, 27, 127),
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 20),
-        child: GNav(
-          // selectedIndex: _currentIndex,
-          // onTabChange: (index) => setState(() => _currentIndex = index),
-          backgroundColor: Color.fromARGB(255, 59, 27, 127),
-          color: Colors.white,
-          activeColor: Colors.white,
-          tabBackgroundColor: const Color.fromARGB(255, 20, 61, 172),
-          padding: EdgeInsets.all(18),
-          gap: 8,
-          tabs: const [
-            GButton(
-              icon: Icons.home,
-              text: "Home",
-            ),
-            GButton(
-              icon: Icons.star,
-              text: "VIP",
-            ),
-            GButton(
-              icon: Icons.diamond,
-              text: "VVIP",
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-/*class MyBottomNavBar extends StatefulWidget {
+class MyBottomNavBar extends StatefulWidget {
   const MyBottomNavBar({super.key});
 
   @override
@@ -59,60 +14,23 @@ class MyBottomNavBar extends StatelessWidget {
 }
 
 class _MyBottomNavBarState extends State<MyBottomNavBar> {
-  int _currentIndex = 1; // ! Chnage this before production => 0
+  int _currentIndex = 0; // ! Chnage this before production => 0
 
   final List<Widget> _screens = [
-    HomePage(),
+    FreePage(),
     vipPage(),
-    VvipPage(),
+    ContactPage(),
   ];
 
   @override
   Widget build(BuildContext context) {
     // Updates
-
-    // Updates
     return Scaffold(
       // Body
       body: _screens[_currentIndex],
 
-      // BG Color
-      // backgroundColor: Colors.red,
-
-      //Esther's gnav
-      bottomNavigationBar: Container(
-        color: Color.fromARGB(255, 59, 27, 127),
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 20),
-          child: GNav(
-            selectedIndex: _currentIndex,
-            onTabChange: (index) => setState(() => _currentIndex = index),
-            backgroundColor: Color.fromARGB(255, 59, 27, 127),
-            color: Colors.white,
-            activeColor: Colors.white,
-            tabBackgroundColor: const Color.fromARGB(255, 20, 61, 172),
-            padding: EdgeInsets.all(18),
-            gap: 8,
-            tabs: const [
-              GButton(
-                icon: Icons.home,
-                text: "Home",
-              ),
-              GButton(
-                icon: Icons.star,
-                text: "VIP",
-              ),
-              GButton(
-                icon: Icons.diamond,
-                text: "VVIP",
-              ),
-            ],
-          ),
-        ),
-      ),
-
       // Kevo's BottomNavigationBar
-      /*bottomNavigationBar: BottomNavigationBar(
+      bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         backgroundColor: Color.fromARGB(255, 59, 27, 127),
         selectedItemColor: Colors.blue,
@@ -122,7 +40,7 @@ class _MyBottomNavBarState extends State<MyBottomNavBar> {
           BottomNavigationBarItem(
             icon: Icon(
               Icons.home,
-              color: Colors.red,
+              color: Colors.white,
               size: 32,
             ),
             label: "Home",
@@ -131,23 +49,23 @@ class _MyBottomNavBarState extends State<MyBottomNavBar> {
           BottomNavigationBarItem(
             icon: Icon(
               Icons.star,
-              color: Colors.red,
+              color: Colors.white,
               size: 32,
             ),
-            label: "VIP",
+            label: "PREMIUM",
           ),
           // VVIP
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.diamond,
-              color: Colors.red,
+              Icons.contacts,
+              color: Colors.white,
               size: 32,
             ),
-            label: "VVIP",
+            label: "Contact",
           ),
           //
         ],
-      ),*/
+      ),
     );
   }
-}*/
+}

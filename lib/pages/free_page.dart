@@ -10,46 +10,51 @@ class FreePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      // Check out our tips image and text
-      children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.start,
+    return Scaffold(
+      backgroundColor: Color.fromARGB(255, 59, 27, 127),
+      body: Padding(
+        padding: const EdgeInsets.only(top: 8),
+        child: Column(
+          // Check out our tips image and text
           children: [
-            Image.asset(
-              'lib/images/ball1.png',
-              height: 100,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Image.asset(
+                  'lib/images/ball1.png',
+                  height: 100,
+                ),
+                Text(
+                  "Winning Tips. Every Match.",
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w400,
+                      fontSize: 20),
+                )
+              ],
             ),
-            Text(
-              "Winning Tips. Every Match.",
-              style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.w400,
-                  fontSize: 20),
-            )
+            const SizedBox(
+              height: 10,
+            ),
+            Expanded(
+                child: ListView.builder(
+                    itemCount: 5,
+                    itemBuilder: (context, index) {
+                      Tip tip = Tip(
+                          id: "Super League",
+                          team1: "Arsenal",
+                          team2: "ManU",
+                          dateTime: DateTime(2017, 9, 7, 17, 30),
+                          freeTip: "1.78");
+                      return TipCard(
+                        tip: tip,
+                      );
+                    }))
           ],
-        ),
-        const SizedBox(
-          height: 10,
-        ),
-        Expanded(
-            child: ListView.builder(
-                itemCount: 5,
-                
-                itemBuilder: (context, index) {
-                  Tip tip = Tip(
-                      id: "Super League",
-                      team1: "Arsenal",
-                      team2: "ManU",
-                      dateTime: DateTime(2017, 9, 7, 17, 30),
-                      freeTip: "1.78");
-                  return TipCard(
-                    tip: tip,
-                  );
-                }))
-      ],
 
-      //tip card
+          //tip card
+        ),
+      ),
     );
   }
 }

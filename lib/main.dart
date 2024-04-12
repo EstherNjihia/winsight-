@@ -2,10 +2,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:winsight/pages/intro_page.dart';
-//import 'package:winsight/pages/home_page.dart';
-//import 'package:winsight/pages/intro_page.dart';
-//import 'package:winsight/pages/vip_page.dart';
-//import 'package:winsight/pages/vvip_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,11 +15,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: IntroPage(),
-      /* routes: {
-         '/home_page': (context) => HomePage(),
-         '/vip_page': (context) => vipPage(),
-         '/vvip_page': (context) => VvipPage(),
-      },*/
     );
   }
 }
