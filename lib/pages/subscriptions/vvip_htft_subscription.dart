@@ -14,7 +14,7 @@ class _VvipHtftSubState extends State<VvipHtftSub> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 59, 27, 127),
-      body: Text("VIP HFTS ODD SUBSCRIBE"),
+      body: Center(child: Text("VIP HFTS ODD SUBSCRIBE")),
     );
   }
 }

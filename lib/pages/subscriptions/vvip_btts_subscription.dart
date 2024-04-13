@@ -14,7 +14,7 @@ class _VvipBttsSubState extends State<VvipBttsSub> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 59, 27, 127),
-      body: Text("VIP BTTS ODD SUBSCRIBE"),
+      body: Center(child: Text("VIP BTTS ODD SUBSCRIBE")),
     );
   }
 }

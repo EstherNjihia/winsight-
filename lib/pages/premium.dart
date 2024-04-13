@@ -11,26 +11,6 @@ import 'package:winsight/pages/subscriptions/vvip_htft_subscription.dart';
 class vipPage extends StatelessWidget {
   const vipPage({super.key});
 
-  //navigate to vip 3odds page
-  // void navigateToSubscription3OddsPage() {
-  //   Get.to(Vip3Sub());
-  // }
-
-  //navigate to 5 odds page
-  void navigateToSubscription5OddsPage() {
-    Get.to(Vip5Sub());
-  }
-
-  //navigate to htft page
-  void navigateToSubscriptionhtftOddsPage() {
-    Get.to(VvipHtftSub());
-  }
-
-  //navigate to btts page
-  void navigateToSubscriptionbttsOddsPage() {
-    Get.to(VvipBttsSub());
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -87,7 +67,7 @@ class vipPage extends StatelessWidget {
                         Color.fromRGBO(212, 175, 55, 1)),
                     minimumSize: MaterialStateProperty.all(Size(130, 50)),
                   ),
-                  onPressed: () => navigateToSubscription5OddsPage,
+                  onPressed: () => Get.to(Vip5Sub()),
                   child: const Text(
                     "5+ Odds",
                     selectionColor: Color.fromARGB(255, 255, 255, 255),
@@ -139,7 +119,7 @@ class vipPage extends StatelessWidget {
                         Color.fromRGBO(144, 238, 144, 1)),
                     minimumSize: MaterialStateProperty.all(Size(130, 50)),
                   ),
-                  onPressed: () => navigateToSubscriptionhtftOddsPage(),
+                  onPressed: () => Get.to(VvipHtftSub()),
                   child: const Text(
                     "HFFT Odds",
                     selectionColor: Color.fromARGB(255, 255, 255, 255),
@@ -155,7 +135,7 @@ class vipPage extends StatelessWidget {
                         Color.fromRGBO(234, 24, 59, 0.966)),
                     minimumSize: MaterialStateProperty.all(Size(130, 50)),
                   ),
-                  onPressed: () => navigateToSubscriptionbttsOddsPage(),
+                  onPressed: () => Get.to(VvipBttsSub()),
                   child: const Text(
                     "BTTS Odds",
                     selectionColor: Color.fromARGB(255, 255, 255, 255),
