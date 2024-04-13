@@ -51,7 +51,7 @@ class vipPage extends StatelessWidget {
                         Color.fromRGBO(203, 203, 212, 1)),
                     minimumSize: MaterialStateProperty.all(Size(130, 50)),
                   ),
-                  onPressed: () => Get.to(Vip3Sub()),
+                  onPressed: () => Get.to(() => Vip3Sub()),
                   child: const Text(
                     "3+ Odds",
                     selectionColor: Color.fromARGB(255, 255, 255, 255),
@@ -67,7 +67,7 @@ class vipPage extends StatelessWidget {
                         Color.fromRGBO(212, 175, 55, 1)),
                     minimumSize: MaterialStateProperty.all(Size(130, 50)),
                   ),
-                  onPressed: () => Get.to(Vip5Sub()),
+                  onPressed: () => Get.to(() => Vip5Sub()),
                   child: const Text(
                     "5+ Odds",
                     selectionColor: Color.fromARGB(255, 255, 255, 255),
@@ -119,7 +119,7 @@ class vipPage extends StatelessWidget {
                         Color.fromRGBO(144, 238, 144, 1)),
                     minimumSize: MaterialStateProperty.all(Size(130, 50)),
                   ),
-                  onPressed: () => Get.to(VvipHtftSub()),
+                  onPressed: () => Get.to(() => VvipHtftSub()),
                   child: const Text(
                     "HFFT Odds",
                     selectionColor: Color.fromARGB(255, 255, 255, 255),
@@ -135,7 +135,7 @@ class vipPage extends StatelessWidget {
                         Color.fromRGBO(234, 24, 59, 0.966)),
                     minimumSize: MaterialStateProperty.all(Size(130, 50)),
                   ),
-                  onPressed: () => Get.to(VvipBttsSub()),
+                  onPressed: () => Get.to(() => VvipBttsSub()),
                   child: const Text(
                     "BTTS Odds",
                     selectionColor: Color.fromARGB(255, 255, 255, 255),

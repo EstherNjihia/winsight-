@@ -66,7 +66,7 @@ class _Vip3SubState extends State<Vip3Sub> {
                     child: const Text(
                       "Subscribe",
                       style: TextStyle(
-                         color: Color.fromRGBO(253, 255, 252, 1),
+                          color: Color.fromRGBO(253, 255, 252, 1),
                           fontSize: 24,
                           fontWeight: FontWeight.bold),
                     ))
@@ -98,7 +98,7 @@ class _Vip3SubState extends State<Vip3Sub> {
                       fontWeight: FontWeight.bold),
                 ),
                 Text(
-                  "\$50",
+                  "\$20",
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 22,
@@ -147,7 +147,7 @@ class _Vip3SubState extends State<Vip3Sub> {
                       fontWeight: FontWeight.bold),
                 ),
                 Text(
-                  "\$80",
+                  "\$30",
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 22,
