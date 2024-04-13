@@ -31,16 +31,49 @@ class vipPage extends StatelessWidget {
 
           // VIP CONTAINER
           Container(
-            height: 200,
+            height: 150,
             width: 400,
             padding: const EdgeInsets.all(12),
             margin: const EdgeInsets.symmetric(horizontal: 25),
             decoration: BoxDecoration(
-                color: Colors.blue[500],
+                color: const Color.fromRGBO(72, 149, 239, 1),
                 borderRadius: BorderRadius.circular(8)),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: const [],
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                ElevatedButton(
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStatePropertyAll(
+                        Color.fromRGBO(203, 203, 212, 1)),
+                    minimumSize: MaterialStateProperty.all(Size(130, 50)),
+                  ),
+                  onPressed: () {},
+                  child: const Text(
+                    "3+ Odds",
+                    selectionColor: Color.fromARGB(255, 255, 255, 255),
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold),
+                  ),
+                ),
+                ElevatedButton(
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStatePropertyAll(
+                        Color.fromRGBO(212, 175, 55, 1)),
+                    minimumSize: MaterialStateProperty.all(Size(130, 50)),
+                  ),
+                  onPressed: () {},
+                  child: const Text(
+                    "5+ Odds",
+                    selectionColor: Color.fromARGB(255, 255, 255, 255),
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ],
             ),
           ),
 
@@ -66,16 +99,49 @@ class vipPage extends StatelessWidget {
 
           //VVIP CONTAINER
           Container(
-            height: 200,
+            height: 150,
             width: 400,
             padding: const EdgeInsets.all(12),
             margin: const EdgeInsets.symmetric(horizontal: 25),
             decoration: BoxDecoration(
-                color: Colors.blue[500],
+                color: const Color.fromRGBO(72, 149, 239, 1),
                 borderRadius: BorderRadius.circular(8)),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: const [],
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                ElevatedButton(
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStatePropertyAll(
+                        Color.fromRGBO(144, 238, 144, 1)),
+                    minimumSize: MaterialStateProperty.all(Size(130, 50)),
+                  ),
+                  onPressed: () {},
+                  child: const Text(
+                    "HFFT Odds",
+                    selectionColor: Color.fromARGB(255, 255, 255, 255),
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold),
+                  ),
+                ),
+                ElevatedButton(
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStatePropertyAll(
+                        Color.fromRGBO(234, 24, 59, 0.966)),
+                    minimumSize: MaterialStateProperty.all(Size(130, 50)),
+                  ),
+                  onPressed: () {},
+                  child: const Text(
+                    "BTTS Odds",
+                    selectionColor: Color.fromARGB(255, 255, 255, 255),
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ],
             ),
           ),
         ],
