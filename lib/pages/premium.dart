@@ -1,11 +1,35 @@
 // ignore_for_file: prefer_const_constructors, camel_case_types, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+import 'package:get/get.dart';
+import 'package:winsight/pages/subscriptions/vip_3_subscription.dart';
+import 'package:winsight/pages/subscriptions/vip_5_subscription.dart';
+import 'package:winsight/pages/subscriptions/vvip_btts_subscription.dart';
+import 'package:winsight/pages/subscriptions/vvip_htft_subscription.dart';
 //import 'package:winsight/Components/tip_card.dart';
 
 class vipPage extends StatelessWidget {
   const vipPage({super.key});
+
+  //navigate to vip 3odds page
+  // void navigateToSubscription3OddsPage() {
+  //   Get.to(Vip3Sub());
+  // }
+
+  //navigate to 5 odds page
+  void navigateToSubscription5OddsPage() {
+    Get.to(Vip5Sub());
+  }
+
+  //navigate to htft page
+  void navigateToSubscriptionhtftOddsPage() {
+    Get.to(VvipHtftSub());
+  }
+
+  //navigate to btts page
+  void navigateToSubscriptionbttsOddsPage() {
+    Get.to(VvipBttsSub());
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -47,7 +71,7 @@ class vipPage extends StatelessWidget {
                         Color.fromRGBO(203, 203, 212, 1)),
                     minimumSize: MaterialStateProperty.all(Size(130, 50)),
                   ),
-                  onPressed: () {},
+                  onPressed: () => Get.to(Vip3Sub()),
                   child: const Text(
                     "3+ Odds",
                     selectionColor: Color.fromARGB(255, 255, 255, 255),
@@ -63,7 +87,7 @@ class vipPage extends StatelessWidget {
                         Color.fromRGBO(212, 175, 55, 1)),
                     minimumSize: MaterialStateProperty.all(Size(130, 50)),
                   ),
-                  onPressed: () {},
+                  onPressed: () => navigateToSubscription5OddsPage,
                   child: const Text(
                     "5+ Odds",
                     selectionColor: Color.fromARGB(255, 255, 255, 255),
@@ -115,7 +139,7 @@ class vipPage extends StatelessWidget {
                         Color.fromRGBO(144, 238, 144, 1)),
                     minimumSize: MaterialStateProperty.all(Size(130, 50)),
                   ),
-                  onPressed: () {},
+                  onPressed: () => navigateToSubscriptionhtftOddsPage(),
                   child: const Text(
                     "HFFT Odds",
                     selectionColor: Color.fromARGB(255, 255, 255, 255),
@@ -131,7 +155,7 @@ class vipPage extends StatelessWidget {
                         Color.fromRGBO(234, 24, 59, 0.966)),
                     minimumSize: MaterialStateProperty.all(Size(130, 50)),
                   ),
-                  onPressed: () {},
+                  onPressed: () => navigateToSubscriptionbttsOddsPage(),
                   child: const Text(
                     "BTTS Odds",
                     selectionColor: Color.fromARGB(255, 255, 255, 255),
