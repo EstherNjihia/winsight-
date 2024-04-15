@@ -51,7 +51,7 @@ class FreePage extends StatelessWidget {
                       );
                     }))
           ],
-
+      
           //tip card
         ),
       ),

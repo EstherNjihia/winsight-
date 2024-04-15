@@ -1,6 +1,10 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:winsight/pages/dashboards/vip_3_monthly.dart';
+import 'package:winsight/pages/dashboards/vip_3_quartely.dart';
+import 'package:winsight/pages/dashboards/vip_3_weekly.dart';
 
 class Vip3Sub extends StatefulWidget {
   const Vip3Sub({super.key});
@@ -62,7 +66,7 @@ class _Vip3SubState extends State<Vip3Sub> {
                           Color.fromRGBO(66, 8, 255, 1)),
                       minimumSize: MaterialStateProperty.all(Size(400, 50)),
                     ),
-                    onPressed: () {},
+                    onPressed: () => Get.to(() => Vip3WeeklyDashboard()),
                     child: const Text(
                       "Subscribe",
                       style: TextStyle(
@@ -111,7 +115,7 @@ class _Vip3SubState extends State<Vip3Sub> {
                           Color.fromRGBO(66, 8, 255, 1)),
                       minimumSize: MaterialStateProperty.all(Size(400, 50)),
                     ),
-                    onPressed: () {},
+                    onPressed: () => Get.to(() => Vip3MonthlyDashboard()),
                     child: const Text(
                       "Subscribe",
                       style: TextStyle(
@@ -160,7 +164,7 @@ class _Vip3SubState extends State<Vip3Sub> {
                           Color.fromRGBO(66, 8, 255, 1)),
                       minimumSize: MaterialStateProperty.all(Size(400, 50)),
                     ),
-                    onPressed: () {},
+                    onPressed: () => Get.to(() => Vip3QuartelyDashboard()),
                     child: const Text(
                       "Subscribe",
                       style: TextStyle(
