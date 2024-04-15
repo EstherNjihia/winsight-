@@ -1,6 +1,10 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:winsight/pages/dashboards/vvip_htft_monthly.dart';
+import 'package:winsight/pages/dashboards/vvip_htft_quartely.dart';
+import 'package:winsight/pages/dashboards/vvip_htft_weekly.dart';
 
 class VvipHtftSub extends StatefulWidget {
   const VvipHtftSub({super.key});
@@ -62,7 +66,7 @@ class _VvipHtftSubState extends State<VvipHtftSub> {
                           Color.fromRGBO(66, 8, 255, 1)),
                       minimumSize: MaterialStateProperty.all(Size(400, 50)),
                     ),
-                    onPressed: () {},
+                    onPressed: () => Get.to(() => VvipHtftWeeklyDashboard()),
                     child: const Text(
                       "Subscribe",
                       style: TextStyle(
@@ -111,7 +115,7 @@ class _VvipHtftSubState extends State<VvipHtftSub> {
                           Color.fromRGBO(66, 8, 255, 1)),
                       minimumSize: MaterialStateProperty.all(Size(400, 50)),
                     ),
-                    onPressed: () {},
+                    onPressed: () => Get.to(() => VvipHtftMonthlyDashboard()),
                     child: const Text(
                       "Subscribe",
                       style: TextStyle(
@@ -160,7 +164,7 @@ class _VvipHtftSubState extends State<VvipHtftSub> {
                           Color.fromRGBO(66, 8, 255, 1)),
                       minimumSize: MaterialStateProperty.all(Size(400, 50)),
                     ),
-                    onPressed: () {},
+                    onPressed: () => Get.to(() => VvipHtftQuartelyDashboard()),
                     child: const Text(
                       "Subscribe",
                       style: TextStyle(

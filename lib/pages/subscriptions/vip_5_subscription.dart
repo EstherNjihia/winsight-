@@ -1,6 +1,10 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:winsight/pages/dashboards/vip_5_monthly.dart';
+import 'package:winsight/pages/dashboards/vip_5_quartely.dart';
+import 'package:winsight/pages/dashboards/vip_5_weekly.dart';
 
 class Vip5Sub extends StatefulWidget {
   const Vip5Sub({super.key});
@@ -62,7 +66,7 @@ class _Vip5SubState extends State<Vip5Sub> {
                           Color.fromRGBO(66, 8, 255, 1)),
                       minimumSize: MaterialStateProperty.all(Size(400, 50)),
                     ),
-                    onPressed: () {},
+                    onPressed: () => Get.to(() => Vip5WeeklyDashboard()),
                     child: const Text(
                       "Subscribe",
                       style: TextStyle(
@@ -111,7 +115,7 @@ class _Vip5SubState extends State<Vip5Sub> {
                           Color.fromRGBO(66, 8, 255, 1)),
                       minimumSize: MaterialStateProperty.all(Size(400, 50)),
                     ),
-                    onPressed: () {},
+                    onPressed: () => Get.to(() => Vip5MonthlyDashboard()),
                     child: const Text(
                       "Subscribe",
                       style: TextStyle(
@@ -160,7 +164,7 @@ class _Vip5SubState extends State<Vip5Sub> {
                           Color.fromRGBO(66, 8, 255, 1)),
                       minimumSize: MaterialStateProperty.all(Size(400, 50)),
                     ),
-                    onPressed: () {},
+                    onPressed: () => Get.to(() => Vip5QuartelyDashboard()),
                     child: const Text(
                       "Subscribe",
                       style: TextStyle(

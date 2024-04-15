@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
 import 'package:winsight/Components/tip_card.dart';
@@ -12,18 +12,27 @@ class FreePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 59, 27, 127),
-      body: Padding(
-        padding: const EdgeInsets.only(top: 8),
-        child: Column(
-          // Check out our tips image and text
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
+      body: Column(
+        children: [
+          //space
+
+          const SizedBox(
+            height: 40,
+          ),
+
+          Container(
+            padding: const EdgeInsets.all(12),
+            margin: const EdgeInsets.symmetric(horizontal: 25),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
+                //image
                 Image.asset(
                   'lib/images/ball1.png',
                   height: 100,
                 ),
+
+                //text
                 Text(
                   "Winning Tips. Every Match.",
                   style: TextStyle(
@@ -33,27 +42,29 @@ class FreePage extends StatelessWidget {
                 )
               ],
             ),
-            const SizedBox(
-              height: 10,
-            ),
-            Expanded(
-                child: ListView.builder(
-                    itemCount: 5,
-                    itemBuilder: (context, index) {
-                      Tip tip = Tip(
-                          id: "Super League",
-                          team1: "Arsenal",
-                          team2: "ManU",
-                          dateTime: DateTime(2017, 9, 7, 17, 30),
-                          freeTip: "1.78");
-                      return TipCard(
-                        tip: tip,
-                      );
-                    }))
-          ],
-      
+          ),
+
+          //space
+          const SizedBox(
+            height: 20,
+          ),
+
           //tip card
-        ),
+          Expanded(
+              child: ListView.builder(
+                  itemCount: 5,
+                  itemBuilder: (context, index) {
+                    Tip tip = Tip(
+                        id: "Super League",
+                        team1: "Arsenal",
+                        team2: "ManU",
+                        dateTime: DateTime(2017, 9, 7, 17, 30),
+                        freeTip: "1.78");
+                    return TipCard(
+                      tip: tip,
+                    );
+                  }))
+        ],
       ),
     );
   }

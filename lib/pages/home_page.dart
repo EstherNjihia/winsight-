@@ -15,28 +15,6 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 59, 27, 127),
       bottomNavigationBar: MyBottomNavBar(),
-      appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 20, 61, 172),
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text(
-              "Predictions",
-              style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 18,
-                  fontWeight: FontWeight.w400),
-            ),
-            Text(
-              "All Games",
-              style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 18,
-                  fontWeight: FontWeight.w400),
-            )
-          ],
-        ),
-      ),
     );
   }
 }

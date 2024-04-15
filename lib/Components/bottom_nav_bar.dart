@@ -3,8 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:winsight/pages/contact.dart';
 import 'package:winsight/pages/free_page.dart';
+import 'package:winsight/pages/home_page.dart';
 import 'package:winsight/pages/premium.dart';
-
 
 class MyBottomNavBar extends StatefulWidget {
   const MyBottomNavBar({super.key});
@@ -29,7 +29,6 @@ class _MyBottomNavBarState extends State<MyBottomNavBar> {
       // Body
       body: _screens[_currentIndex],
 
-      // Kevo's BottomNavigationBar
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         backgroundColor: Color.fromARGB(255, 59, 27, 127),
@@ -54,7 +53,7 @@ class _MyBottomNavBarState extends State<MyBottomNavBar> {
             ),
             label: "PREMIUM",
           ),
-          // VVIP
+          // // VVIP
           BottomNavigationBarItem(
             icon: Icon(
               Icons.contacts,

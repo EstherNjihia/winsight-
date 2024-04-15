@@ -7,15 +7,8 @@ class ContactPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text(
-        "The Contact PAGE",
-        style: TextStyle(
-          color: Colors.black,
-          fontWeight: FontWeight.bold,
-          fontSize: 64,
-        ),
-      ),
+    return Scaffold(
+      backgroundColor: Color.fromARGB(255, 59, 27, 127),
     );
   }
 }
