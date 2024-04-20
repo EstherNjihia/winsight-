@@ -2,9 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:winsight/pages/dashboards/vvip_btts_monthly.dart';
-import 'package:winsight/pages/dashboards/vvip_btts_quartely.dart';
-import 'package:winsight/pages/dashboards/vvip_btts_weekly.dart';
+import 'package:winsight/pages/dashboards/vvip_btts_dashboard.dart';
 
 class VvipBttsSub extends StatefulWidget {
   const VvipBttsSub({super.key});
@@ -66,7 +64,7 @@ class _VvipBttsSubState extends State<VvipBttsSub> {
                           Color.fromRGBO(66, 8, 255, 1)),
                       minimumSize: MaterialStateProperty.all(Size(400, 50)),
                     ),
-                    onPressed: () => Get.to(() => VvipBttsWeeklyDashboard()),
+                    onPressed: () => Get.to(() => VvipBttsDashboard()),
                     child: const Text(
                       "Subscribe",
                       style: TextStyle(
@@ -115,7 +113,7 @@ class _VvipBttsSubState extends State<VvipBttsSub> {
                           Color.fromRGBO(66, 8, 255, 1)),
                       minimumSize: MaterialStateProperty.all(Size(400, 50)),
                     ),
-                    onPressed: () => Get.to(() => VvipBttsMonthlyDashboard()),
+                    onPressed: () => Get.to(() => VvipBttsDashboard()),
                     child: const Text(
                       "Subscribe",
                       style: TextStyle(
@@ -164,7 +162,7 @@ class _VvipBttsSubState extends State<VvipBttsSub> {
                           Color.fromRGBO(66, 8, 255, 1)),
                       minimumSize: MaterialStateProperty.all(Size(400, 50)),
                     ),
-                    onPressed: () => Get.to(() => VvipBttsQuartelyDashboard()),
+                    onPressed: () => Get.to(() => VvipBttsDashboard()),
                     child: const Text(
                       "Subscribe",
                       style: TextStyle(

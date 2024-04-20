@@ -3,7 +3,6 @@
 import 'package:flutter/material.dart';
 import 'package:winsight/pages/contact.dart';
 import 'package:winsight/pages/free_page.dart';
-import 'package:winsight/pages/home_page.dart';
 import 'package:winsight/pages/premium.dart';
 
 class MyBottomNavBar extends StatefulWidget {
@@ -42,7 +41,7 @@ class _MyBottomNavBarState extends State<MyBottomNavBar> {
               color: Colors.white,
               size: 32,
             ),
-            label: "Home",
+            label: "HOME",
           ),
           // VIP
           BottomNavigationBarItem(
@@ -53,14 +52,14 @@ class _MyBottomNavBarState extends State<MyBottomNavBar> {
             ),
             label: "PREMIUM",
           ),
-          // // VVIP
+          //Contact
           BottomNavigationBarItem(
             icon: Icon(
               Icons.contacts,
               color: Colors.white,
               size: 32,
             ),
-            label: "Contact",
+            label: "CONTACT",
           ),
           //
         ],

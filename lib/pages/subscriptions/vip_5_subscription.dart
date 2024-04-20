@@ -2,9 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:winsight/pages/dashboards/vip_5_monthly.dart';
-import 'package:winsight/pages/dashboards/vip_5_quartely.dart';
-import 'package:winsight/pages/dashboards/vip_5_weekly.dart';
+import 'package:winsight/pages/dashboards/vip_5_dashboard.dart';
 
 class Vip5Sub extends StatefulWidget {
   const Vip5Sub({super.key});
@@ -66,7 +64,7 @@ class _Vip5SubState extends State<Vip5Sub> {
                           Color.fromRGBO(66, 8, 255, 1)),
                       minimumSize: MaterialStateProperty.all(Size(400, 50)),
                     ),
-                    onPressed: () => Get.to(() => Vip5WeeklyDashboard()),
+                    onPressed: () => Get.to(() => Vip5Dashboard()),
                     child: const Text(
                       "Subscribe",
                       style: TextStyle(
@@ -115,7 +113,7 @@ class _Vip5SubState extends State<Vip5Sub> {
                           Color.fromRGBO(66, 8, 255, 1)),
                       minimumSize: MaterialStateProperty.all(Size(400, 50)),
                     ),
-                    onPressed: () => Get.to(() => Vip5MonthlyDashboard()),
+                    onPressed: () => Get.to(() => Vip5Dashboard()),
                     child: const Text(
                       "Subscribe",
                       style: TextStyle(
@@ -164,7 +162,7 @@ class _Vip5SubState extends State<Vip5Sub> {
                           Color.fromRGBO(66, 8, 255, 1)),
                       minimumSize: MaterialStateProperty.all(Size(400, 50)),
                     ),
-                    onPressed: () => Get.to(() => Vip5QuartelyDashboard()),
+                    onPressed: () => Get.to(() => Vip5Dashboard()),
                     child: const Text(
                       "Subscribe",
                       style: TextStyle(
